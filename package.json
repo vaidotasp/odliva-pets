@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "odliva-pets-g",
   "description": "Gatsby default starter",
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
@@ -16,9 +16,7 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": [],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

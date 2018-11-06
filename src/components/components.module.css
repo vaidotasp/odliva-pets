@@ -1,0 +1,12 @@
+.benefitCard {
+  background: tan;
+  width: 230px;
+  height: 230px;
+}
+
+.animalCard {
+  background: skyblue;
+  width: 230px;
+  height: 230px;
+  border-radius: 100%;
+}

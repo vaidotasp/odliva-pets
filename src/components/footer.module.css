@@ -1,0 +1,17 @@
+.footer {
+  background-color: var(--main-black);
+  color: white;
+  padding: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footerTitle {
+  font-size: 0.9rem;
+}
+
+.footerContent {
+  font-size: 0.8rem;
+}

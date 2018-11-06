@@ -1,0 +1,53 @@
+.nav {
+  background-color: #f2e4e245;
+  margin: 0 auto;
+  padding: 0;
+  height: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.logo {
+  height: 40px;
+  background-color: white;
+  border-radius: 1px;
+  margin-right: 0.3rem;
+  margin-left: 0.5rem;
+}
+
+.navTitle {
+  margin: 0;
+  display: inline;
+  font-size: 1.7rem;
+  margin-left: 0.75rem;
+  line-height: 50px;
+  vertical-align: super;
+}
+
+.navlink {
+  display: inline-block;
+  margin-right: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 50px;
+}
+
+.nav > ul {
+  list-style-type: none;
+  float: right;
+}
+
+.subnav {
+  color: white;
+  background-color: black;
+  display: inline-flex;
+  width: 100%;
+}
+
+.subnav > p {
+  margin: 0;
+  padding: 0;
+  margin-right: 0.1rem;
+  margin-left: 0.9rem;
+  font-size: 0.7rem;
+}

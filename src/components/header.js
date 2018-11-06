@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import styles from './header.module.css';
-import logo from '../images/logo-big.svg';
-
+//import logo from '../images/logo-big.svg';
+//needs optimizing/changing later
+const logo =
+  'https://uploads.codesandbox.io/uploads/user/b006de2a-c0ab-49ad-9183-ab410f72fbf6/qBMm-logo-big.svg';
 const NavLink = props => (
   <li className={styles.navlink}>
     <Link to={props.to}>{props.children}</Link>

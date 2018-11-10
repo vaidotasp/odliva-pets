@@ -3,17 +3,20 @@ import Layout from '../components/layout';
 import styles from './main.module.css';
 import BenefitCard from '../components/BenefitCard';
 import AnimalCard from '../components/AnimalCard';
-
+import ReadMoreBtn from '../components/ReadMoreBtn';
+import FloatingBtn from '../components/FloatingBtn';
 const IndexPage = () => (
   <Layout>
-    <div className={styles.hero}>
-      <h1>Odliva Doktor Animals</h1>
-      <p>
-        Natūralus probiotikas skirtas sustiprinti naminių gyvūnų sveikatą ir
-        imunitetą.
-      </p>
-      <button>Call TO Action</button>
-    </div>
+    <section className={styles.hero}>
+      <div className={styles.heroInner}>
+        <h1>Odliva Doktor Animals</h1>
+        <p>
+          Natūralus probiotikas skirtas sustiprinti naminių gyvūnų sveikatą ir
+          imunitetą.
+        </p>
+        <button>Call TO Action</button>
+      </div>
+    </section>
     <div className={styles.mainPitch}>
       <h1>Naudojimo Rezultatai:</h1>
       <div className={styles.benefitSection}>
@@ -29,8 +32,9 @@ const IndexPage = () => (
         <AnimalCard title="Šunys" />
         <AnimalCard title="Kiti" />
       </div>
-      <button>Skaityti Daugiau</button>
+      <ReadMoreBtn />
     </div>
+    <FloatingBtn />
   </Layout>
 );
 

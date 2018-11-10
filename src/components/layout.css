@@ -3,6 +3,17 @@
   --main-background: #f5f5f5;
 }
 
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 400;
+  src: local('.SFNSText-Light'), local('.HelveticaNeueDeskInterface-Light'),
+    local('.LucidaGrandeUI'), local('Ubuntu Light'), local('Segoe UI Light'),
+    local('Roboto-Light'), local('DroidSans'), local('Tahoma');
+}
+
+/* Now, let's apply it on an element */
+
 html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
@@ -16,6 +27,7 @@ body {
   color: var(--main-black);
   background: var(--main-background);
   margin: 0;
+  font-family: 'system';
 }
 
 a {

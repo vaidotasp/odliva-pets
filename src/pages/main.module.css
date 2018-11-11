@@ -1,37 +1,17 @@
 .hero {
-  /* padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 100px;
-  padding-bottom: 100px; */
-  /* background: url('../images/dog-cat-1.jpg') no-repeat center center; */
   color: white;
   width: 100%;
-  height: 550px;
   min-width: 100%;
-  background-image: url('../images/panelhero.jpg');
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: cover;
   backface-visibility: hidden;
-  overflow: hidden;
-  position: relative;
 }
 
-/* .hero::before {
-  background: url('../images/panelhero.jpg') no-repeat center center;
-  background-size: cover;
-  content: '';
-  display: block;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 550px;
-  z-index: -2;
-} */
-
 .heroInner {
-  border: 0px solid white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  color: white;
   width: 30%;
   height: 100%;
   display: flex;

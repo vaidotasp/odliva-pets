@@ -1,4 +1,6 @@
 import React from 'react';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import styles from './main.module.css';
 import BenefitCard from '../components/BenefitCard';
@@ -26,9 +28,13 @@ const pics = {
   fur_card:
     'https://uploads.codesandbox.io/uploads/user/b006de2a-c0ab-49ad-9183-ab410f72fbf6/jL2k-012-pet.svg',
 };
-const IndexPage = () => (
+const IndexPage = props => (
   <Layout>
-    <section className={styles.hero}>
+    <section>
+      <Img
+        className={styles.hero}
+        fluid={props.data.imageHero.childImageSharp.fluid}
+      />
       <div className={styles.heroInner}>
         <h1>Odliva Doktor Animals</h1>
         <p>
@@ -65,5 +71,17 @@ const IndexPage = () => (
     <FloatingBtn />
   </Layout>
 );
+
+export const pageQuery = graphql`
+  query {
+    imageHero: file(relativePath: { eq: "panelhero.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;

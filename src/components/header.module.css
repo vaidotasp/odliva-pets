@@ -33,6 +33,10 @@
   line-height: 50px;
 }
 
+.navlink:hover {
+  text-decoration: underline;
+}
+
 .nav > ul {
   list-style-type: none;
   float: right;

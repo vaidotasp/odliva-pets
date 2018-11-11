@@ -8,26 +8,12 @@ import AnimalCard from '../components/AnimalCard';
 import ReadMoreBtn from '../components/ReadMoreBtn';
 import FloatingBtn from '../components/FloatingBtn';
 
-const pics = {
-  cat_small:
-    'https://uploads.codesandbox.io/uploads/user/b006de2a-c0ab-49ad-9183-ab410f72fbf6/D7qe-cat-small.jpg',
-  dog_small:
-    'https://uploads.codesandbox.io/uploads/user/b006de2a-c0ab-49ad-9183-ab410f72fbf6/JzvT-dog-small.jpg',
-  parrot_small:
-    'https://uploads.codesandbox.io/uploads/user/b006de2a-c0ab-49ad-9183-ab410f72fbf6/8iUM-parrot-small.jpg',
-  rabbit_small:
-    'https://uploads.codesandbox.io/uploads/user/b006de2a-c0ab-49ad-9183-ab410f72fbf6/o64t-rabbit-small.jpg',
-  immunity_card:
-    'https://uploads.codesandbox.io/uploads/user/b006de2a-c0ab-49ad-9183-ab410f72fbf6/NXVv-020-heart.svg',
-  smell_card:
-    'https://uploads.codesandbox.io/uploads/user/b006de2a-c0ab-49ad-9183-ab410f72fbf6/KIeK-002-dog-smelling-dog.svg',
-  wound_card:
-    'https://uploads.codesandbox.io/uploads/user/b006de2a-c0ab-49ad-9183-ab410f72fbf6/PEpx-011-patch-1.svg',
-  digestion_card:
-    'https://uploads.codesandbox.io/uploads/user/b006de2a-c0ab-49ad-9183-ab410f72fbf6/euFT-015-bone.svg',
-  fur_card:
-    'https://uploads.codesandbox.io/uploads/user/b006de2a-c0ab-49ad-9183-ab410f72fbf6/jL2k-012-pet.svg',
-};
+import immunity_card from '../images/benefits/020-heart.svg';
+import smell_card from '../images/benefits/002-dog-smelling-dog.svg';
+import wound_card from '../images/benefits/011-patch-1.svg';
+import digestion_card from '../images/benefits/015-bone.svg';
+import fur_card from '../images/benefits/012-pet.svg';
+
 const IndexPage = props => (
   <Layout>
     <section>
@@ -47,24 +33,33 @@ const IndexPage = props => (
     <div className={styles.mainPitch}>
       <h1>Naudojimo Rezultatai:</h1>
       <div className={styles.benefitSection}>
-        <BenefitCard title="1. Sustiprina imunitetą" img={pics.immunity_card} />
-        <BenefitCard title="2. Pagerina virškinimą" img={pics.digestion_card} />
+        <BenefitCard title="1. Sustiprina imunitetą" img={immunity_card} />
+        <BenefitCard title="2. Pagerina virškinimą" img={digestion_card} />
         <BenefitCard
           title="3. Pagerėja išorinė išvaizda (kailis)"
-          img={pics.fur_card}
+          img={fur_card}
         />
-        <BenefitCard
-          title="4. Greičiau gyjančios žaizdos"
-          img={pics.wound_card}
-        />
-        <BenefitCard title="5. Pašalinami kvapai" img={pics.smell_card} />
+        <BenefitCard title="4. Greičiau gyjančios žaizdos" img={wound_card} />
+        <BenefitCard title="5. Pašalinami kvapai" img={smell_card} />
       </div>
       <h1 className={styles.animalGroupTitle}>Preparatas Pritaikytas:</h1>
       <div className={styles.animalGroupSection}>
-        <AnimalCard title="Katės" img={pics.cat_small} />
-        <AnimalCard title="Šunys" img={pics.dog_small} />
-        <AnimalCard title="Triušiai" img={pics.rabbit_small} />
-        <AnimalCard title="Papūgos" img={pics.parrot_small} />
+        <AnimalCard
+          title="Katės"
+          img={props.data.imageCat.childImageSharp.fluid}
+        />
+        <AnimalCard
+          title="Šunys"
+          img={props.data.imageDog.childImageSharp.fluid}
+        />
+        <AnimalCard
+          title="Triušiai"
+          img={props.data.imageRabbit.childImageSharp.fluid}
+        />
+        <AnimalCard
+          title="Papūgos"
+          img={props.data.imageParrot.childImageSharp.fluid}
+        />
       </div>
       <ReadMoreBtn />
     </div>
@@ -77,6 +72,34 @@ export const pageQuery = graphql`
     imageHero: file(relativePath: { eq: "panelhero.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageCat: file(relativePath: { eq: "cat-small.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageDog: file(relativePath: { eq: "dog-small.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageParrot: file(relativePath: { eq: "parrot-small.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageRabbit: file(relativePath: { eq: "rabbit-small.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
           ...GatsbyImageSharpFluid
         }
       }

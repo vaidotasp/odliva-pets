@@ -3,7 +3,7 @@ import styles from './components.module.css';
 
 const BenefitCard = props => (
   <div className={styles.benefitCard}>
-    <img src="" alt="card" />
+    <img src={props.img} alt="card" />
     <p>{props.title}</p>
   </div>
 );

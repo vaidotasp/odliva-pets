@@ -5,6 +5,7 @@
   height: 50px;
   padding-left: 10px;
   padding-right: 50px;
+  border-bottom: 0.5px solid #80808091;
 }
 
 .logo {
@@ -31,6 +32,10 @@
   text-transform: uppercase;
   cursor: pointer;
   line-height: 50px;
+}
+
+.navlink:hover {
+  text-decoration: underline;
 }
 
 .nav > ul {

@@ -1,0 +1,54 @@
+.generalWrap {
+  padding-top: 50px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-bottom: 200px;
+}
+
+.generalInfo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 5rem;
+  margin-top: 5rem;
+}
+
+.generalDescription {
+  border: 1px solid goldenrod;
+  padding: 1.5rem;
+}
+
+.generalDescription > ul > li > h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.generalDescription > ul > li > p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.imgPlaceholder {
+  width: 400px;
+  height: 500px;
+  border: 1px solid aqua;
+  background: seagreen;
+}
+
+.animalDescWrap {
+  margin-top: 5rem;
+}
+
+.animalDesc {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  border: 1px solid goldenrod;
+  margin-bottom: 50px;
+}
+
+.animalDetail {
+  padding: 1.5rem;
+}
+
+.animalDescImg {
+}

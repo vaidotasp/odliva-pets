@@ -65,10 +65,6 @@ p {
   border-radius: 5px;
 }
 
-.animalDescWrap {
-  /* margin-top: 5rem; */
-}
-
 .animalDesc {
   display: grid;
   grid-template-columns: 1fr auto;

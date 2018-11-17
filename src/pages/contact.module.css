@@ -1,10 +1,29 @@
 .contactWrap {
-  padding: 100px;
-  border: 2px solid black;
+  padding: 50px;
+}
+
+.contactWrap > img {
+  width: 100px;
+  text-align: center;
 }
 
 .contactWrap > h2 {
   text-align: center;
+}
+
+.cInfo {
+  width: max-content;
+  padding: 15px;
+  background: white;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.formTitle {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  margin-top: 40px;
 }
 
 .formWrap {
@@ -13,13 +32,15 @@
 }
 
 form {
-  border: 1px solid green;
+  border: 1px solid #dfdfdf;
+  background: white;
   display: grid;
   justify-content: center;
-  width: auto;
+  width: 25rem;
   padding: 20px;
   box-shadow: 0 3px 7px 1px #0003;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
 form > div {
@@ -61,3 +82,5 @@ label {
   border: 0;
   width: 100px;
 }
+
+/* Awesome styling */

@@ -90,3 +90,42 @@ p {
   list-style-type: circle;
   list-style-position: outside;
 }
+
+@media screen and (max-width: 415px) {
+  .generalWrap {
+    padding: 0 10px 50px 10px;
+  }
+
+  .generalWrap > h1 {
+    font-size: 1.5rem;
+  }
+
+  .animalDescWrap > h1 {
+    text-align: center;
+  }
+
+  .generalDescription {
+    display: block;
+    grid-template-columns: 1fr;
+  }
+
+  .description {
+    grid-column: 1;
+  }
+  .imgPlaceholder {
+    grid-column: 1;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .effects {
+    grid-column: 1;
+  }
+
+  .content {
+    grid-column: 1;
+  }
+}

@@ -125,3 +125,27 @@ label {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+@media screen and (max-width: 415px) {
+  .contactWrap {
+    padding: 0 0 20px 0;
+  }
+
+  .formWrap {
+    width: 95%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 100%;
+    width: 100%;
+    margin: 0;
+    border: 1px solid gray;
+  }
+}

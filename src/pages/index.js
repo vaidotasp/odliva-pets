@@ -18,7 +18,7 @@ const IndexPage = props => {
   const screenWidth = window.innerWidth;
   const heroImg =
     screenWidth < 415
-      ? props.data.imageHero.childImageSharp.fluid
+      ? props.data.imageHeroMobile.childImageSharp.fluid
       : props.data.imageHero.childImageSharp.fluid;
   return (
     <Layout>
@@ -77,6 +77,13 @@ export const pageQuery = graphql`
     imageHero: file(relativePath: { eq: "panelhero.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageHeroMobile: file(relativePath: { eq: "hero-mobile.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 415) {
           ...GatsbyImageSharpFluid
         }
       }

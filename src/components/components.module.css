@@ -90,3 +90,12 @@
   border: 0;
   width: 14rem;
 }
+
+@media screen and (max-width: 415px) {
+  .floatingBtn {
+    width: 45px;
+    height: 45px;
+    bottom: 15px;
+    right: 15px;
+  }
+}

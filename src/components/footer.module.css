@@ -15,3 +15,10 @@
 .footerContent {
   font-size: 0.8rem;
 }
+
+@media screen and (max-width: 415px) {
+  .footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

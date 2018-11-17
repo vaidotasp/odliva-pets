@@ -5,6 +5,10 @@
   padding-bottom: 200px;
 }
 
+.generalWrap > a > button {
+  margin-top: 20px;
+}
+
 .generalInfo {
   margin-top: 5rem;
 }
@@ -14,7 +18,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   border: 1px solid goldenrod;
   padding: 1.5rem;
-  box-shadow: 0 3px 7px 1px #0003;
+  box-shadow: 0 3px 7px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
@@ -69,7 +73,7 @@ p {
   display: grid;
   grid-template-columns: 1fr auto;
   /* margin-bottom: 50px; */
-  box-shadow: 0 3px 7px 1px #0003;
+  box-shadow: 0 3px 7px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 

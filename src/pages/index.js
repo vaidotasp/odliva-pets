@@ -14,58 +14,63 @@ import wound_card from '../images/benefits/011-patch-1.svg';
 import digestion_card from '../images/benefits/015-bone.svg';
 import fur_card from '../images/benefits/012-pet.svg';
 
-const IndexPage = props => (
-  <Layout>
-    <section>
-      <Img
-        className={styles.hero}
-        fluid={props.data.imageHero.childImageSharp.fluid}
-      />
-      <div className={styles.heroInner}>
-        <h1>Odliva Doktor Animals</h1>
-        <p>
-          Natūralus probiotikas skirtas sustiprinti naminių gyvūnų sveikatą ir
-          imunitetą.
-        </p>
+const IndexPage = props => {
+  const screenWidth = window.innerWidth;
+  const heroImg =
+    screenWidth < 415
+      ? props.data.imageHero.childImageSharp.fluid
+      : props.data.imageHero.childImageSharp.fluid;
+  return (
+    <Layout>
+      <section>
+        {console.log(window.innerWidth)}
+        <Img className={styles.hero} fluid={heroImg} />
+        <div className={styles.heroInner}>
+          <h1>Odliva Doktor Animals</h1>
+          <p>
+            Natūralus probiotikas skirtas sustiprinti naminių gyvūnų sveikatą ir
+            imunitetą.
+          </p>
+          <ReadMoreBtn />
+        </div>
+      </section>
+      <div className={styles.mainPitch}>
+        <h1>Naudojimo Rezultatai:</h1>
+        <div className={styles.benefitSection}>
+          <BenefitCard title="1. Sustiprina imunitetą" img={immunity_card} />
+          <BenefitCard title="2. Pagerina virškinimą" img={digestion_card} />
+          <BenefitCard
+            title="3. Pagerėja išorinė išvaizda (kailis)"
+            img={fur_card}
+          />
+          <BenefitCard title="4. Greičiau gyjančios žaizdos" img={wound_card} />
+          <BenefitCard title="5. Pašalinami kvapai" img={smell_card} />
+        </div>
+        <h1 className={styles.animalGroupTitle}>Preparatas Pritaikytas:</h1>
+        <div className={styles.animalGroupSection}>
+          <AnimalCard
+            title="Katės"
+            img={props.data.imageCat.childImageSharp.fluid}
+          />
+          <AnimalCard
+            title="Šunys"
+            img={props.data.imageDog.childImageSharp.fluid}
+          />
+          <AnimalCard
+            title="Triušiai"
+            img={props.data.imageRabbit.childImageSharp.fluid}
+          />
+          <AnimalCard
+            title="Papūgos"
+            img={props.data.imageParrot.childImageSharp.fluid}
+          />
+        </div>
         <ReadMoreBtn />
       </div>
-    </section>
-    <div className={styles.mainPitch}>
-      <h1>Naudojimo Rezultatai:</h1>
-      <div className={styles.benefitSection}>
-        <BenefitCard title="1. Sustiprina imunitetą" img={immunity_card} />
-        <BenefitCard title="2. Pagerina virškinimą" img={digestion_card} />
-        <BenefitCard
-          title="3. Pagerėja išorinė išvaizda (kailis)"
-          img={fur_card}
-        />
-        <BenefitCard title="4. Greičiau gyjančios žaizdos" img={wound_card} />
-        <BenefitCard title="5. Pašalinami kvapai" img={smell_card} />
-      </div>
-      <h1 className={styles.animalGroupTitle}>Preparatas Pritaikytas:</h1>
-      <div className={styles.animalGroupSection}>
-        <AnimalCard
-          title="Katės"
-          img={props.data.imageCat.childImageSharp.fluid}
-        />
-        <AnimalCard
-          title="Šunys"
-          img={props.data.imageDog.childImageSharp.fluid}
-        />
-        <AnimalCard
-          title="Triušiai"
-          img={props.data.imageRabbit.childImageSharp.fluid}
-        />
-        <AnimalCard
-          title="Papūgos"
-          img={props.data.imageParrot.childImageSharp.fluid}
-        />
-      </div>
-      <ReadMoreBtn />
-    </div>
-    <FloatingBtn />
-  </Layout>
-);
+      <FloatingBtn />
+    </Layout>
+  );
+};
 
 export const pageQuery = graphql`
   query {

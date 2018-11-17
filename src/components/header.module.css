@@ -9,7 +9,7 @@
 }
 
 .logo {
-  height: 40px;
+  width: 100px;
   background-color: white;
   border: 1px solid green;
   border-radius: 1px;
@@ -56,4 +56,23 @@
   margin-right: 0.1rem;
   margin-left: 0.9rem;
   font-size: 0.7rem;
+}
+
+@media screen and (max-width: 415px) {
+  .subnav {
+    display: block;
+  }
+
+  .nav {
+    padding-right: 0;
+  }
+
+  .logo {
+    width: 70px;
+    margin-left: 0;
+  }
+
+  .navTitle {
+    font-size: 0.9rem;
+  }
 }

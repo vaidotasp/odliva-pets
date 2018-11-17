@@ -31,9 +31,23 @@ export class Form extends Component {
       email: '',
       phone: '',
       message: '',
+      sending: false,
+      modalShow: false,
+      isSuccess: true,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.removeModal = this.removeModal.bind(this);
+  }
+
+  removeModal() {
+    this.setState({
+      modalShow: false,
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+    });
   }
 
   handleChange(event) {
@@ -64,11 +78,24 @@ export class Form extends Component {
     //   .then(response => response.json())
     //   .then(msg => console.log(msg))
     //   .error(error => console.log(error));
+    const sentSuccess = false;
+    if (sentSuccess === true) {
+      this.setState({ isSuccess: true, modalShow: true, sending: false });
+      console.log('successful sent the msg');
+    } else if (sentSuccess === false) {
+      this.setState({ isSuccess: false, modalShow: true, sending: false });
+      console.log('failure state');
+    }
   }
 
   render() {
     return (
       <>
+        <Modal
+          show={this.state.modalShow}
+          isSuccess={this.state.isSuccess}
+          removeModal={this.removeModal}
+        />
         <h2 className={styles.formTitle}>Arba parašykite žinutę</h2>
         <div className={styles.formWrap}>
           <form
@@ -137,7 +164,7 @@ export class Form extends Component {
               <input
                 className={styles.submitBtn}
                 type="submit"
-                value="Siūsti"
+                value={this.state.sending ? 'Siunčiama...' : 'Siūsti'}
                 tabIndex="5"
               />
             </div>
@@ -147,5 +174,35 @@ export class Form extends Component {
     );
   }
 }
+
+const Modal = props => {
+  function toggleModal(e) {
+    e.preventDefault();
+    props.removeModal();
+  }
+
+  const display = props.show ? { display: 'block' } : { display: 'none' };
+  const msg = props.isSuccess ? (
+    <div>
+      <p>Žinutė nusiųsta sėkmingai.</p>
+      <p>Su jumis susisieksime netrukus!</p>
+    </div>
+  ) : (
+    <p>
+      Žinutės nusiųsti nepavyko, bandykite dar kartą arba susisiekite su mumis
+      telefonu/el.paštu.
+    </p>
+  );
+  return (
+    <div className={styles.modal} style={display}>
+      <div className={styles.modalMain}>
+        {msg}
+        <button className={styles.modalBtn} onClick={toggleModal}>
+          OK
+        </button>
+      </div>
+    </div>
+  );
+};
 
 export default ContactPage;

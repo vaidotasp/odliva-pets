@@ -80,7 +80,49 @@ label {
   cursor: pointer;
   font-size: 1.5rem;
   border: 0;
-  width: 100px;
+  width: max-content;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modalMain {
+  position: fixed;
+  background: white;
+  width: 300px;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 40px;
+}
+
+.modalBtn {
+  margin-top: 20px;
+  background-color: #00785f;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: 0;
+  width: max-content;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Awesome styling */

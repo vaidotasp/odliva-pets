@@ -1,5 +1,6 @@
-import React from 'react';
-import styles from './footer.module.css';
+import React from 'react'
+import { Link } from 'gatsby'
+import styles from './footer.module.css'
 
 const Footer = () => (
   <footer className={styles.footer}>
@@ -10,10 +11,14 @@ const Footer = () => (
       Eko-Natural turi daugiau kaip dešimtmetį trunkančią darbo patirtį kuriant
       plataus spektro produktus skirtus žemės ūkiui, gyvulininkystei ir aplinkos
       apsaugai. Telefonas: (370) 687 50650 -- (370) 614 24459 Elektroninis
-      Paštas: uabodliva@gmail.com [Uzsakymai]
+      Paštas: uabodliva@gmail.com
     </div>
-    <div>[TERMS]</div>
+    <div>
+      <Link to="/terms">
+        <p style={{ fontSize: '0.8rem' }}>Privatumo Politika</p>
+      </Link>
+    </div>
   </footer>
-);
+)
 
-export default Footer;
+export default Footer

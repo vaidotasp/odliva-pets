@@ -99,3 +99,34 @@
     right: 15px;
   }
 }
+
+.cookieModal {
+  background-color: #1e602ce3;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 50px;
+  padding-right: 10px;
+  font-size: 0.8rem;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  width: auto;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 70px;
+  font-weight: 700;
+}

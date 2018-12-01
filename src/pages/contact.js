@@ -67,25 +67,25 @@ export class Form extends Component {
     const payload = Object.assign({}, ...this.state);
     console.log(payload);
     //real thing
-    // const url = `https://xbd5m5kx9f.execute-api.us-east-1.amazonaws.com/dev/email/send`;
-    // fetch(url, {
-    //   method: 'POST',
-    //   body: JSON.stringify(payload),
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    // })
-    //   .then(response => response.json())
-    //   .then(msg => console.log(msg))
-    //   .error(error => console.log(error));
-    const sentSuccess = false;
-    if (sentSuccess === true) {
-      this.setState({ isSuccess: true, modalShow: true, sending: false });
-      console.log('successful sent the msg');
-    } else if (sentSuccess === false) {
-      this.setState({ isSuccess: false, modalShow: true, sending: false });
-      console.log('failure state');
-    }
+    const url = `https://xbd5m5kx9f.execute-api.us-east-1.amazonaws.com/dev/email/send`;
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(msg => console.log(msg))
+      .error(error => console.log(error));
+    // const sentSuccess = true;
+    // if (sentSuccess === true) {
+    //   this.setState({ isSuccess: true, modalShow: true, sending: false });
+    //   console.log('successful sent the msg');
+    // } else if (sentSuccess === false) {
+    //   this.setState({ isSuccess: false, modalShow: true, sending: false });
+    //   console.log('failure state');
+    // }
   }
 
   render() {

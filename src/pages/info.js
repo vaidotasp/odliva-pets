@@ -102,6 +102,14 @@ const InfoPage = props => (
                 rekomenduojama skirti dvigubą dozę.
               </li>
             </ul>
+            <h4>Kvapų sumažinimas (Higienizacija)</h4>
+            <p>
+              Purškiame gyvūnų buvimo vietas Doktor Animals tirpalu su
+              nechloruotu vandeniu, santykiu 1:10 (1 dalis preparato, 9 dalims
+              vandens). 1 litras šio tirpalo yra sunaudojimas apie 20
+              kvadratinių metrų paviršiaus išpurskimui. Pirmą savaitę purškiama
+              kas tris dienas; sekančias savaites purškiama kas 7-10 dienų.
+            </p>
           </div>
           <div className={styles.imgPlaceholder}>
             <Img
@@ -121,8 +129,8 @@ const InfoPage = props => (
             </p>
             <ul className={styles.listStyle}>
               <li>
-                Suaugę šunys (svoris): 5 kg - 5 ml, 5-15 kg - 10 ml virš 15 kg -
-                20 ml.
+                Suaugę šunys (svoris): iki 5 kg - 5 ml, 5-15 kg - 10 ml virš 15
+                kg - 20 ml.
               </li>
               <li>Šuniukai – 1 ml</li>
               <li>
@@ -130,6 +138,14 @@ const InfoPage = props => (
                 gimimo.
               </li>
             </ul>
+            <h4>Kvapų sumažinimas (Higienizacija)</h4>
+            <p>
+              Purškiame gyvūnų buvimo vietas Doktor Animals tirpalu su
+              nechloruotu vandeniu, santykiu 1:10 (1 dalis preparato, 9 dalims
+              vandens). 1 litras šio tirpalo yra sunaudojimas apie 20
+              kvadratinių metrų paviršiaus išpurskimui. Pirmą savaitę purškiama
+              kas tris dienas; sekančias savaites purškiama kas 7-10 dienų.
+            </p>
           </div>
           <div className={styles.imgPlaceholder}>
             <Img
@@ -144,10 +160,14 @@ const InfoPage = props => (
           <div className={styles.animalDetail}>
             <h4>Naudojimas</h4>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-              rerum quo fugit quaerat et, nisi ipsum deserunt tempora alias,
-              minus doloribus? Eligendi, commodi eos? Eum itaque quos distinctio
-              delectus modi.
+              Gėrimui (kasdien): 2 ml Doktor Animals ištirpinama 100 ml vandens
+              (arba apipurkšti pašarą preparatu).
+            </p>
+            <h4>Kvapų sumažinimas (Higienizacija)</h4>
+            <p>
+              Purškiame gyvūnų buvimo vietas Doktor Animals tirpalu su
+              nechloruotu vandeniu, santykiu 1:20 (1 dalis preparato, 19 dalims
+              vandens). Purškiama kas septynios dienos.
             </p>
           </div>
           <div className={styles.imgPlaceholder}>
@@ -165,7 +185,7 @@ const InfoPage = props => (
             <p>
               Pašarą papildantis mišinys gyvųjų pieno rūgšties bakterijų ir
               žolių ekstraktų pagrindu, duodamas gyvūnams derinant su vandeniu
-              arba grūdais
+              arba grūdais.
             </p>
             <ul className={styles.listStyle}>
               <li>Leidžia išvengti skrandžio ir virškinamojo trakto ligų</li>

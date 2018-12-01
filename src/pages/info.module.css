@@ -100,6 +100,10 @@ p {
     font-size: 1.5rem;
   }
 
+  .animalDetail {
+    padding: 0.5rem;
+  }
+
   .animalDescWrap > h1 {
     text-align: center;
   }
@@ -107,6 +111,7 @@ p {
   .generalDescription {
     display: block;
     grid-template-columns: 1fr;
+    padding: 0.5rem;
   }
 
   .description {

@@ -18,18 +18,22 @@ class Layout extends React.Component {
   }
 
   privacyPref() {
-    console.log(`toggle privacy pref thing`)
-    //write into the local storage
-
+    const currentPref = localStorage.getItem('OdlivaPrivacyPref')
+    if (!currentPref) {
+      //create new pref inside the local storage
+      localStorage.setItem('OdlivaPrivacyPref', 'true')
+      this.setState({ privacyPrefShow: false })
+    }
     //update the state
     this.setState({ privacyPrefShow: false })
   }
 
   componentDidMount() {
-    console.log(`checking for dismiss preferance...`)
-    //use localstorage to check ?
-    const privacyPrefShow = true
-    this.setState({ privacyPrefShow })
+    const currentPref = localStorage.getItem('OdlivaPrivacyPref')
+    if (currentPref) {
+      //if current pref exists, utilize it and hide the privacy modal
+      this.setState({ privacyPrefShow: false })
+    }
   }
 
   render() {

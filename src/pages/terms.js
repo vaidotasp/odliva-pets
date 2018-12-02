@@ -7,8 +7,7 @@ const TermsPage = () => (
   <Layout>
     <div className={styles.termWrap}>
       <h1>Mūsų privatumo politika</h1>
-
-      <div>
+      <div className={styles.terms}>
         <h4>Bendra Informacija</h4>
         <p>
           UAB Odliva (toliau – Duomenų valdytojas) šia privatumo politika

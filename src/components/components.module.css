@@ -115,6 +115,24 @@
   width: 100%;
 }
 
+@media screen and (max-width: 415px) {
+  .cookieModal {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 0.7rem;
+  }
+
+  .row > p {
+    line-height: 1.1rem;
+  }
+
+  .row > button {
+    font-size: 1rem;
+    margin-left: 10px;
+    padding: 10px;
+  }
+}
+
 .row {
   display: flex;
   margin-left: auto;

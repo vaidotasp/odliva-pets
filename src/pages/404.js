@@ -1,10 +1,13 @@
 import React from 'react'
 import Layout from '../components/layout'
+import styles from './404.module.css'
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <div className={styles.wrap}>
+      <h1>Puslapis Nerastas</h1>
+      <p>Grįžkite į pagrindinį puslapį</p>
+    </div>
   </Layout>
 )
 

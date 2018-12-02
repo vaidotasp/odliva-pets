@@ -68,7 +68,7 @@ class Layout extends React.Component {
               <html lang="lt" />
             </Helmet>
             <Header />
-            <div>{this.props.children}</div>
+            {this.props.children}
             <Footer />
             {this.state.privacyPrefShow && (
               <CookieModal privacyToggle={this.privacyPref} />

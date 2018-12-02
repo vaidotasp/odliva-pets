@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import Layout from '../components/layout';
-import styles from './info.module.css';
-import FloatingBtn from '../components/FloatingBtn';
-import OrderBtn from '../components/OrderBtn';
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import Layout from '../components/layout'
+import styles from './info.module.css'
+import FloatingBtn from '../components/FloatingBtn'
+import OrderBtn from '../components/OrderBtn'
 const InfoPage = props => (
   <Layout>
     <div className={styles.generalWrap}>
@@ -32,10 +32,10 @@ const InfoPage = props => (
               apykaitos procesuose ir veiksmingai šalina patogenines bakterijas.
             </p>
           </div>
-          <div className={styles.imgPlaceholder}>
+          <div className={styles.productPlaceholder}>
             <Img
-              fluid={props.data.imageCat.childImageSharp.fluid}
-              className={styles.imgStyling}
+              fluid={props.data.imageProduct.childImageSharp.fluid}
+              className={styles.imgStylingProduct}
             />
           </div>
 
@@ -211,10 +211,17 @@ const InfoPage = props => (
     </div>
     <FloatingBtn />
   </Layout>
-);
+)
 
 export const pageQuery = graphql`
   query {
+    imageProduct: file(relativePath: { eq: "product.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     imageCat: file(relativePath: { eq: "cat-big.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 700) {
@@ -244,6 +251,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 
-export default InfoPage;
+export default InfoPage

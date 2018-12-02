@@ -107,6 +107,55 @@ p {
   list-style-position: outside;
 }
 
+@media screen and (max-width: 770px) {
+  .generalWrap {
+    padding: 0 10px 50px 10px;
+  }
+
+  .generalWrap > h1 {
+    font-size: 1.5rem;
+  }
+
+  .animalDetail {
+    padding: 0.5rem;
+    grid-row: 2;
+  }
+
+  .animalDescWrap > h1 {
+    text-align: center;
+  }
+
+  .generalDescription {
+    display: block;
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+
+  .description {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .imgPlaceholder {
+    grid-column: 1;
+    grid-row: 1;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .effects {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .content {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
+
 @media screen and (max-width: 415px) {
   .generalWrap {
     padding: 0 10px 50px 10px;

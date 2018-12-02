@@ -16,6 +16,13 @@
   font-size: 0.8rem;
 }
 
+@media screen and (max-width: 770px) {
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 @media screen and (max-width: 415px) {
   .footer {
     padding-left: 10px;

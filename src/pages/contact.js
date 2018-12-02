@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
-import Layout from '../components/layout';
-import styles from './contact.module.css';
-import q_icon from '../images/q.svg';
+import React, { Component } from 'react'
+import Layout from '../components/layout'
+import styles from './contact.module.css'
+import q_icon from '../images/q.svg'
 
 const ContactPage = () => (
   <Layout>
     <div className={styles.contactWrap}>
       <div style={{ textAlign: 'center' }}>
         <img src={q_icon} alt="question_icon" style={{ width: 100 }} />
-        {/* <div>
-          <h2>Turite klausimų?</h2>
-          <h2>Norite užsisakyti produkcijos?</h2>
-        </div> */}
       </div>
       <h2>Susisiekite su mumis:</h2>
       <div className={styles.cInfo}>
@@ -21,11 +17,11 @@ const ContactPage = () => (
       <Form />
     </div>
   </Layout>
-);
+)
 
 export class Form extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       name: '',
       email: '',
@@ -34,10 +30,10 @@ export class Form extends Component {
       sending: false,
       modalShow: false,
       isSuccess: true,
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.removeModal = this.removeModal.bind(this);
+    }
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+    this.removeModal = this.removeModal.bind(this)
   }
 
   removeModal() {
@@ -47,27 +43,28 @@ export class Form extends Component {
       email: '',
       phone: '',
       message: '',
-    });
+    })
   }
 
   handleChange(event) {
     if (event.target.name === 'name') {
-      this.setState({ name: event.target.value });
+      this.setState({ name: event.target.value })
     } else if (event.target.name === 'email') {
-      this.setState({ email: event.target.value });
+      this.setState({ email: event.target.value })
     } else if (event.target.name === 'phone') {
-      this.setState({ phone: event.target.value });
+      this.setState({ phone: event.target.value })
     } else if (event.target.name === 'desc') {
-      this.setState({ message: event.target.value });
+      this.setState({ message: event.target.value })
     }
   }
 
   handleSubmit(e) {
-    e.preventDefault();
-    const payload = Object.assign({}, ...this.state);
-    console.log(payload);
+    e.preventDefault()
+    const payload = Object.assign({}, ...this.state)
+    console.log(payload)
     //real thing
-    const url = `https://xbd5m5kx9f.execute-api.us-east-1.amazonaws.com/dev/email/send`;
+    this.setState({ sending: true })
+    const url = `https://xbd5m5kx9f.execute-api.us-east-1.amazonaws.com/dev/email/send`
     fetch(url, {
       method: 'POST',
       body: JSON.stringify(payload),
@@ -76,16 +73,14 @@ export class Form extends Component {
       },
     })
       .then(response => response.json())
-      .then(msg => console.log(msg))
-      .error(error => console.log(error));
-    // const sentSuccess = true;
-    // if (sentSuccess === true) {
-    //   this.setState({ isSuccess: true, modalShow: true, sending: false });
-    //   console.log('successful sent the msg');
-    // } else if (sentSuccess === false) {
-    //   this.setState({ isSuccess: false, modalShow: true, sending: false });
-    //   console.log('failure state');
-    // }
+      .then(msg => {
+        console.log(msg)
+        this.setState({ isSuccess: true, modalShow: true, sending: false })
+      })
+      .catch(error => {
+        console.log(error)
+        this.setState({ isSuccess: false, modalShow: true, sending: false })
+      })
   }
 
   render() {
@@ -171,17 +166,17 @@ export class Form extends Component {
           </form>
         </div>
       </>
-    );
+    )
   }
 }
 
 const Modal = props => {
   function toggleModal(e) {
-    e.preventDefault();
-    props.removeModal();
+    e.preventDefault()
+    props.removeModal()
   }
 
-  const display = props.show ? { display: 'block' } : { display: 'none' };
+  const display = props.show ? { display: 'block' } : { display: 'none' }
   const msg = props.isSuccess ? (
     <div>
       <p>Žinutė nusiųsta sėkmingai.</p>
@@ -192,7 +187,7 @@ const Modal = props => {
       Žinutės nusiųsti nepavyko, bandykite dar kartą arba susisiekite su mumis
       telefonu/el.paštu.
     </p>
-  );
+  )
   return (
     <div className={styles.modal} style={display}>
       <div className={styles.modalMain}>
@@ -202,7 +197,7 @@ const Modal = props => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContactPage;
+export default ContactPage

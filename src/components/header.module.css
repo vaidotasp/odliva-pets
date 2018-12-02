@@ -58,6 +58,28 @@
   font-size: 0.7rem;
 }
 
+@media screen and (max-width: 770px) {
+  .subnav {
+    display: flex;
+  }
+
+  .nav {
+    padding-right: 0;
+  }
+
+  .nav > ul {
+    float: right;
+  }
+  .logo {
+    width: 70px;
+    margin-left: 0;
+  }
+
+  .navTitle {
+    font-size: 1.1rem;
+  }
+}
+
 @media screen and (max-width: 415px) {
   .subnav {
     display: block;

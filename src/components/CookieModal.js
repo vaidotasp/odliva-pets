@@ -10,7 +10,9 @@ const CookieModal = props => (
         tikslais šioje svetainėje naudojame slapukus, kuriuos galėsite bet kada
         atšaukti.
         <Link to="/terms">
-          <p style={{ color: 'gold', textAlign: 'left' }}>Skaityti Plačiau</p>
+          <span style={{ color: 'gold', textAlign: 'left' }}>
+            Skaityti Plačiau
+          </span>
         </Link>
       </p>
       <button className={styles.button} onClick={props.privacyToggle}>

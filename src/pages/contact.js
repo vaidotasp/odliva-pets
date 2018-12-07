@@ -61,10 +61,8 @@ export class Form extends Component {
   handleSubmit(e) {
     e.preventDefault()
     const payload = Object.assign({}, ...this.state)
-    console.log(payload)
-    //real thing
     this.setState({ sending: true })
-    const url = `https://xbd5m5kx9f.execute-api.us-east-1.amazonaws.com/dev/email/send`
+    const url = `https://ajj64zurh1.execute-api.us-east-1.amazonaws.com/prod/email/send`
     fetch(url, {
       method: 'POST',
       body: JSON.stringify(payload),

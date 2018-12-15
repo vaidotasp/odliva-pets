@@ -17,9 +17,9 @@ import fur_card from '../images/benefits/012-pet.svg'
 class IndexPage extends React.Component {
   constructor(props) {
     super(props)
-  }
-  state = {
-    width: '',
+    this.state = {
+      width: '',
+    }
   }
 
   componentDidMount() {

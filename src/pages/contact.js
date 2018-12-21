@@ -157,7 +157,7 @@ export class Form extends Component {
               <input
                 className={styles.submitBtn}
                 type="submit"
-                value={this.state.sending ? 'Siunčiama...' : 'Siūsti'}
+                value={this.state.sending ? 'Siunčiama...' : 'Siųsti'}
                 tabIndex="5"
               />
             </div>

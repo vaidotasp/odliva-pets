@@ -10,7 +10,7 @@ const Footer = () => (
       produktų platintoja Lietuvos, Latvijos, Estijos ir Baltarusijos rinkoms.
       Eko-Natural turi daugiau kaip dešimtmetį trunkančią darbo patirtį kuriant
       plataus spektro produktus skirtus žemės ūkiui, gyvulininkystei ir aplinkos
-      apsaugai. Telefonas: (370) 687 50650 -- (370) 614 24459 Elektroninis
+      apsaugai. Telefonas: (370) 687 50650 Elektroninis
       Paštas: uabodliva@gmail.com
     </div>
     <div>
